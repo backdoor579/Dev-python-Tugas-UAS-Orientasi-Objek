@@ -1,0 +1,111 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- Kategori -->
+<section id="kategori" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Kategori Produk</h2>
+    <div class="row">
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card">
+          <img
+            src="https://i.pinimg.com/736x/a2/ac/1b/a2ac1b1c6a13b97b17b906d27e625e8e.jpg"
+            class="card-img-top gradient-shadow"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">SKATEBOARD</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card">
+          <img
+            src="https://i.pinimg.com/736x/ae/04/c2/ae04c2cd2e994a61921a6ef3298e89ab.jpg"
+            class="card-img-top gradient-shadow"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">SKATEBOARD BAG</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card">
+          <img
+            src="https://i.pinimg.com/736x/43/86/c3/4386c322d6091e6959294c621f3eebdf.jpg"
+            class="card-img-top gradient-shadow"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">SHOES</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card">
+          <img
+            src="https://i.pinimg.com/736x/01/6a/4a/016a4ab2a70d3d3f19f22731a139cb86.jpg"
+            class="card-img-top gradient-shadow"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">JEANS</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Efek gradasi hijau di sekitar gambar */
+  .gradient-shadow {
+    border-radius: 8px;
+    box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.4),
+      0 0 15px 5px rgba(0, 128, 0, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .gradient-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 10px rgba(0, 255, 127, 0.7),
+      0 0 20px 10px rgba(0, 255, 0, 0.9);
+  }
+
+  /* Styling card agar sejajar dan ukuran gambar seragam */
+  .card {
+    border: none;
+    overflow: hidden;
+    height: 100%; /* Pastikan tinggi kartu seragam */
+    max-width: 280px; /* Maksimal lebar kartu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card img {
+    height: 200px; /* Tinggi tetap untuk semua gambar */
+    width: 100%; /* Pastikan lebar gambar mengikuti lebar kartu */
+    object-fit: contain; /* Gambar tidak akan terpotong */
+    background-color: #f8f8f8; /* Tambahkan latar belakang putih untuk gambar kecil */
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Sejajarkan kartu di tengah */
+    gap: 20px; /* Jarak antar kartu */
+  }
+</style>
+
+{% endblock %}
